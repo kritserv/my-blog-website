@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦜</text></svg>">
+	<title>Automating Django Development with Python and Bash | K-Blog Website</title>
+</head>
+<body>
+	<nav>
+		<div class="nav-content">
+			<h1 id="nav-brand"><a href="/" id="nav-button">Krit-Blog</a></h1>
+			<h2 id="nav-item"><a href="/" id="nav-button">Home</a></h2>
+			<h2 id="nav-item"><a href="/content" id="nav-button">Content</a></h2>
+		</div>
+	</nav>
+	<div class="content">
+		<div class="card-content">
+			<p>11 Dec 2023</p>
+			<h1>Automating Django Development with Python and Bash</h1>
+			<p>In the world of web development, efficiency is key. As a Django developer, you’re already using one of the most powerful and streamlined frameworks available. But what if you could make your workflow even more efficient? Automation with Python and Bash scripts can do just that. Here’s how:</p>
+			<br>
+			<img id="big-img" src="static/img/web-dev.webp">
+			<br>			
+			<h2>Starting a Django Project with a Pre-made Template</h2>
+			<p>Starting a new Django project involves a lot of boilerplate code. You can automate this process by creating a Python or Bash script that sets up a new project with a pre-made template. Here’s a simple example in Bash:</p>
+			<div class="code">
+				<p>#!/bin/bash</p>
+				<p><span id="⬜">django-admin startproject</span> <span id="🟥">$1</span></p>
+				<p><span id="🥬">cd</span><span id="🟥"> $1</span></p>
+				<p><span id="🥬">cp</span><span id="⬜"> /path/to/your/template/* .</span></p>
+			</div>
+			<br>
+			<p>This script takes a project name as an argument, creates a new Django project with that name, navigates into the project directory, and copies files from your template into the new project.</p>
+			<br>
+			<h2>Automating Admin Account Creation</h2>
+			<p>Creating admin accounts is another task that can be automated. You can write a Django management command in Python that creates an admin account. Here’s a simple example:</p>
+			<div class="code">
+				<p><span id="🟨">from</span><span id="⬜"> django<span id="🟥">.</span>core<span id="🟥">.</span>management<span id="🟥">.</span>base</span> <span id="🟨">import</span><span id="⬜"> BaseCommand</span></p>
+				<p><span id="🟨">from</span> <span id="⬜">django<span id="🟥">.</span>contrib<span id="🟥">.</span>auth<span id="🟥">.</span>models</span><span id="🟨"> import</span><span id="⬜"> User</span></p>
+				<br>
+				<p><span id="🟨">class</span> <span id="⬜">Command</span><span id="🟦">(</span><span id="⬜">BaseCommand</span><span id="🟦">)</span><span id="🟥">:</span></p>
+				<p>&#8195; <span id="🟨">def</span><span id="🟥"> handle</span><span id="🟦">(</span><span id="🟩">self</span><span id="🟥">, *</span><span id="⬜">args</span><span id="🟥">, **</span><span id="⬜">options</span><span id="🟦">)</span><span id="🟥">:</span></p>
+				<p>&#8195;&#8195; <span id="⬜">User</span><span id="🟥">.</span><span id="⬜">objects</span><span id="🟥">.</span><span id="⬜">create_superuser</span><span id="🟦">(</span><span id="🟧">'admin'</span><span id="🟥">,</span><span id="🟧"> 'admin@example.com'</span><span id="🟥">,</span> <span id="🟧">'adminpassword'</span><span id="🟦">)</span></p>
+			</div>
+			<br>
+			<p>This script creates a new superuser with the username ‘admin’, email ‘admin@example.com’, and password ‘adminpassword’.</p>
+			<br>			
+			<h2>Pip Installing Dependencies</h2>
+			<p>Managing dependencies is another task that can be automated. A requirements.txt file can list your project’s dependencies, and pip can install them all with one command:</p>
+			<div class="code">
+				<p><span id="⬜">pip</span> <span id="🥬">install</span> <span id="🟨">-r</span> <span id="⬜">requirements.txt</span></p>
+			</div>
+			<br>			
+			<h2>Using Docker for Development Environments</h2>
+			<p>Docker can automate the process of setting up development environments. With a Dockerfile and docker-compose.yml, you can define your environment and services, and then bring them up with one command:</p>
+			<div class="code">
+				<p><span id="⬜">docker-compose up</span></p>
+			</div>
+			<br>			
+			<h2>Conclusion</h2>
+			<p>In conclusion, automation can make your life as a Django developer easier and more efficient. With Python and Bash scripts, you can automate repetitive tasks and focus on what really matters: building great web applications.</p>
+		</div>
+	</div>
+</body>
+</html>
