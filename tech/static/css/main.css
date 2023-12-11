@@ -35,6 +35,8 @@ h1, h2 {
 	.content {
 		margin-left: 12px;
 		margin-bottom: 155px;
+		margin-right: 5px;
+		padding-bottom: 60px;
 	}
 	#big-img {
 		margin-left: 0px;
@@ -55,6 +57,10 @@ h1, h2 {
 	.content {
 		margin-left: 65px;
 		margin-bottom: 195px;
+		margin-right: 65px;
+		padding-right: 10vw;
+		max-width: 60vw;
+		padding-bottom: 130px;
 	}
 	#big-img {
 		margin-left: auto;
