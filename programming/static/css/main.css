@@ -71,8 +71,10 @@ h1, h2 {
 	.content {
 		margin-left: 12px;
 		margin-bottom: 155px;
-		margin-right: 5px;
-		padding-bottom: 60px;
+	}
+	.card-content {
+		margin-bottom: 30px;
+		margin-right: 32px;
 	}
 	#big-img {
 		margin-left: 0px;
@@ -109,6 +111,10 @@ h1, h2 {
 	.code {
 		width: clamp(150px, 50vw, 1200px);
 		font-size: 1.1rem;
+	}
+	.card-content {
+		margin-bottom: 45px;
+		margin-right: clamp(10px, 40vw, 600px);
 	}
 	
 }
